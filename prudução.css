@@ -1,0 +1,112 @@
+/* ia-producao.css */
+
+/* Estilos específicos para a página de inteligência artificial na produção */
+
+/* Header com cor tema da página */
+.bg-primary {
+    background-color: #007bff !important;
+ }
+ 
+ .text-primary {
+    color: #007bff !important;
+ }
+ 
+ .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+ }
+ 
+ .btn-outline-primary:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+ }
+ 
+ /* Seções com espaçamento e alinhamento */
+ .my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+ }
+ 
+ .mb-4 {
+    margin-bottom: 2rem !important;
+ }
+ 
+ .text-center {
+    text-align: center !important;
+ }
+ 
+ /* Estilos para os cards de aplicações da IA */
+ .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+ 
+ .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+ }
+ 
+ .card-img-top {
+    max-height: 220px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+ }
+ 
+ .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+ }
+ 
+ .card-text {
+    font-size: 1.05rem;
+    color: #495057;
+ }
+ 
+ .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+ }
+ 
+ .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    color: #fff;
+ }
+ 
+ /* Lista de benefícios */
+ .list-unstyled li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+ }
+ 
+ /* Seção de inscrição com fundo claro e borda */
+ .bg-light.border.rounded {
+    padding: 3rem 1.5rem;
+    border-width: 1px !important;
+ }
+ 
+ /* Footer com cor tema */
+ .bg-success.text-white.py-4 {
+    background-color: #198754 !important;
+    color: #fff !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+ }
+ 
+ .footer p {
+    margin-bottom: 0.25rem;
+ }
+ 
+ /* Imagens responsivas dentro das seções */
+ .img-fluid {
+    max-width: 100%;
+    height: auto;
+ }
+ 
+ /* Ajuste fino para imagens nos cards */
+ .img-card {
+    object-fit: cover;
+    height: 180px; /* Mantenha uma altura consistente para as imagens dos cards */
+ }

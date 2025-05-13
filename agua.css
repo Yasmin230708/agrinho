@@ -1,0 +1,94 @@
+/* agua.css */
+
+/* Estilos específicos para a página de acessibilidade à água */
+
+/* Header com cor tema da página */
+.bg-success {
+    background-color: #28a745 !important;
+ }
+ 
+ .text-success {
+    color: #28a745 !important;
+ }
+ 
+ .btn-outline-success {
+    color: #28a745;
+    border-color: #28a745;
+ }
+ 
+ .btn-outline-success:hover {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+ }
+ 
+ /* Seções com espaçamento e alinhamento */
+ .my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+ }
+ 
+ .mb-4 {
+    margin-bottom: 2rem !important;
+ }
+ 
+ .text-center {
+    text-align: center !important;
+ }
+ 
+ /* Estilos para os cards de desafios e soluções */
+ .card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+ }
+ 
+ .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+ }
+ 
+ .card-img-top {
+    max-height: 200px; /* Ajuste a altura conforme necessário */
+    object-fit: cover;
+ }
+ 
+ .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+ }
+ 
+ .card-text {
+    font-size: 1rem;
+    color: #555;
+ }
+ 
+ .btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+ }
+ 
+ .btn-success:hover {
+    background-color: #1e7e34;
+    border-color: #1e7e34;
+    color: #fff;
+ }
+ 
+ /* Seção de inscrição com fundo claro e borda */
+ .bg-light.border.rounded {
+    padding: 3rem 1.5rem;
+    border-width: 1px !important;
+ }
+ 
+ /* Footer com cor tema */
+ .bg-success.text-white.py-4 {
+    background-color: #198754 !important;
+    color: #fff !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+ }
+ 
+ .footer p {
+    margin-bottom: 0.25rem;
+ }

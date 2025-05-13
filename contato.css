@@ -1,0 +1,94 @@
+/* contato.css */
+
+/* Estilos específicos para a página de contato */
+
+/* Header com cor tema da página */
+.bg-info {
+    background-color: #17a2b8 !important; /* Azul claro */
+ }
+ 
+ .text-info {
+    color: #17a2b8 !important;
+ }
+ 
+ .btn-info {
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+ }
+ 
+ .btn-info:hover {
+    background-color: #138496;
+    border-color: #138496;
+ }
+ 
+ /* Seções com espaçamento e alinhamento */
+ .my-5 {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+ }
+ 
+ .mb-4 {
+    margin-bottom: 2rem !important;
+ }
+ 
+ .text-center {
+    text-align: center !important;
+ }
+ 
+ /* Estilos para o formulário de contato */
+ form {
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+ }
+ 
+ .form-label {
+    font-weight: bold;
+    color: #495057;
+ }
+ 
+ .form-control {
+    border-color: #ced4da;
+ }
+ 
+ .form-control:focus {
+    border-color: #17a2b8;
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+ }
+ 
+ .form-select {
+    border-color: #ced4da;
+ }
+ 
+ .form-select:focus {
+    border-color: #17a2b8;
+    box-shadow: 0 0 0 0.2rem rgba(23, 162, 184, 0.25);
+ }
+ 
+ .btn-info {
+    font-weight: bold;
+ }
+ 
+ /* Outras formas de contato */
+ .list-unstyled li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+ }
+ 
+ .list-unstyled li i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+ }
+ 
+ /* Footer com cor tema */
+ .bg-success.text-white.py-4 {
+    background-color: #198754 !important;
+    color: #fff !important;
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+ }
+ 
+ .footer p {
+    margin-bottom: 0.25rem;
+ }
