@@ -1,94 +1,120 @@
-/* inovacao.css */
+/* General body styles */
+body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+   line-height: 1.7; /* Improved readability */
+   color: #333; /* Dark gray for better text contrast */
+}
 
-/* Estilos específicos para a página de inovação e tecnologia */
+/* Header section */
+header.bg-success {
+   padding: 3rem 0; /* Increased padding for more visual space */
+}
 
-/* Header com cor tema da página */
-.bg-warning {
-    background-color: #ffc107 !important; /* Amarelo */
- }
- 
- .text-warning {
-    color: #ffc107 !important;
- }
- 
- .btn-outline-warning {
-    color: #ffc107;
-    border-color: #ffc107;
- }
- 
- .btn-outline-warning:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: #000; /* Cor do texto ao passar o mouse pode ser ajustada */
- }
- 
- /* Seções com espaçamento e alinhamento */
- .my-5 {
-    margin-top: 3rem !important;
-    margin-bottom: 3rem !important;
- }
- 
- .mb-4 {
-    margin-bottom: 2rem !important;
- }
- 
- .text-center {
-    text-align: center !important;
- }
- 
- /* Estilos para os cards de tecnologias */
- .card {
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
- }
- 
- .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
- }
- 
- .card-img-top {
-    max-height: 200px; /* Ajuste a altura conforme necessário */
-    object-fit: cover;
- }
- 
- .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-    margin-bottom: 0.75rem;
- }
- 
- .card-text {
-    font-size: 1rem;
-    color: #555;
- }
- 
- .btn-warning {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: #000; /* Cor do texto inicial pode ser ajustada */
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
- }
- 
- .btn-warning:hover {
-    background-color: #e0a800;
-    border-color: #e0a800;
-    color: #000;
- }
- 
- /* Seção de inscrição com fundo claro e borda */
- .bg-light.border.rounded {
-    padding: 3rem 1.5rem;
-    border-width: 1px !important;
- }
- 
- /* Footer com cor tema */
- .bg-success.text-white.py-4 {
-    background-color: #198754 !important;
-    color: #fff !important;
-    padding-top: 1.5rem !important;
-    padding-bottom: 1.5rem !important;
- }
- 
- .footer p {
-    margin-bottom: 0.25rem;
- }
+header h1 {
+   font-size: 3.5rem; /* Larger title */
+   margin-bottom: 0.75rem;
+   font-weight: bold; /* Emphasize the main title */
+}
+
+.lead-subtitle { /* Custom class for the specific subtitle in the header */
+   color: #f8f9fa; /* Light text for subtitle */
+   font-size: 1.75rem;
+   font-weight: normal;
+   opacity: 0.8; /* Slightly less prominent */
+   margin-bottom: 1rem; /* Add some space below the subtitle */
+}
+
+/* Navigation bar */
+.navbar-brand img {
+   filter: brightness(1.1); /* Slightly brighten the logo */
+}
+
+.navbar-nav .nav-link {
+   padding: 0.75rem 1rem;
+   transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+   background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+.navbar-nav .nav-link.active {
+   font-weight: bold;
+}
+
+/* Main content styles */
+.section-title { /* A common class for section titles for consistent styling */
+   border-bottom: 3px solid; /* Border color will be inherited from text color */
+   padding-bottom: 0.5rem;
+   margin-bottom: 1.5rem !important; /* Use !important to override Bootstrap's mb-4 if needed */
+}
+
+/* Specific border colors for section titles based on Bootstrap text utility classes */
+h2.text-success.section-title {
+   border-color: #28a745; /* Specific border color for success title */
+}
+
+h2.text-warning.section-title { /* For Energia Rural page */
+   border-color: #ffc107; /* Specific border color for warning title */
+}
+
+h2.text-info.section-title { /* For Acessibilidade à Água page */
+   border-color: #0dcaf0; /* Specific border color for info title */
+}
+
+h2.text-primary.section-title { /* For Produção e Industrialização page */
+   border-color: #0d6efd; /* Specific border color for primary title */
+}
+
+h2.text-secondary.section-title { /* For Inovação e Tecnologia page */
+   border-color: #6c757d; /* Specific border color for secondary title */
+}
+
+h3.text-primary.section-title {
+   border-color: #0d6efd; /* Specific border color for primary title */
+}
+
+h3.text-secondary.section-title {
+   border-color: #6c757d; /* Specific border color for secondary title */
+}
+
+h5.text-danger.section-title { /* Example for potential use, ensure consistency if used */
+   border-color: #dc3545;
+}
+
+
+.lead {
+   font-size: 1.25rem;
+   font-weight: 300;
+   margin-bottom: 1rem;
+   color: #555; /* Slightly darker lead text */
+}
+
+.main-section-image { /* Specific class for the main image to apply custom styles */
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Card styles */
+.custom-card { /* Custom class for cards to apply uniform styles */
+   border-width: 0.1rem; /* Thinner card borders */
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+}
+
+.custom-card:hover {
+   transform: translateY(-5px); /* Slight lift on hover */
+   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* More pronounced shadow on hover */
+}
+
+.custom-card-img { /* Custom class for images within cards */
+   max-height: 200px; /* Adjust card image height */
+   width: 100%;
+   object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+/* Footer styles */
+footer {
+   background-color: #343a40; /* Bootstrap dark color */
+   color: #fff;
+}
