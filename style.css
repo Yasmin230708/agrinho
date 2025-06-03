@@ -2,50 +2,72 @@
 
 
 
+
+
+
+
 body {
+
+
+
+
 
 
 
     padding: 0;
     
     
+    
     margin: 0;
+    
     
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
     
     
+    
     line-height: 1.7; /* Improved readability */
+    
     
     
     color: #333; /* Dark gray for better text contrast */
     
     
+    
     }
+    
     
     
     /* General body styles */
     
     
+    
     body {
+    
     
     
     padding: 0;
     
     
+    
     margin: 0;
+    
     
     
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
     
     
+    
     line-height: 1.7; /* Improved readability */
+    
     
     
     color: #333; /* Dark gray for better text contrast */
     
     
+    
     }
+    
     
     
     
@@ -53,22 +75,29 @@ body {
     /* Header section */
     
     
+    
     .cabecalho {
+    
     
     
     background-color: #198754; /* Bootstrap success color - more vibrant */
     
     
+    
     color: #fff;
+    
     
     
     text-align: center;
     
     
+    
     padding: 3rem 0; /* Increased padding for more visual space */
     
     
+    
     }
+    
     
     
     
@@ -76,16 +105,21 @@ body {
     .cabecalho h1 {
     
     
+    
     font-size: 3.5rem; /* Larger title */
+    
     
     
     margin-bottom: 0.75rem;
     
     
+    
     font-weight: bold; /* Emphasize the main title */
     
     
+    
     }
+    
     
     
     
@@ -93,19 +127,25 @@ body {
     .cabecalho h3 {
     
     
+    
     color: #f8f9fa; /* Light text for subtitle */
+    
     
     
     font-size: 1.75rem;
     
     
+    
     font-weight: normal;
+    
     
     
     opacity: 0.8; /* Slightly less prominent */
     
     
+    
     }
+    
     
     
     
@@ -113,13 +153,17 @@ body {
     /* Navigation bar */
     
     
+    
     .navbar-primary {
+    
     
     
     background-color: #0d6efd; /* Bootstrap primary color */
     
     
+    
     }
+    
     
     
     
@@ -127,10 +171,13 @@ body {
     .navbar-brand img {
     
     
+    
     filter: brightness(1.1); /* Slightly brighten the logo */
     
     
+    
     }
+    
     
     
     
@@ -138,13 +185,17 @@ body {
     .navbar-nav .nav-link {
     
     
+    
     padding: 0.75rem 1rem;
+    
     
     
     transition: background-color 0.3s ease; /* Smooth hover effect */
     
     
+    
     }
+    
     
     
     
@@ -152,10 +203,13 @@ body {
     .navbar-nav .nav-link:hover {
     
     
+    
     background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
     
     
+    
     }
+    
     
     
     
@@ -163,10 +217,13 @@ body {
     .navbar-nav .nav-link.active {
     
     
+    
     font-weight: bold;
     
     
+    
     }
+    
     
     
     
@@ -174,13 +231,17 @@ body {
     /* Main content styles */
     
     
+    
     .container {
+    
     
     
     max-width: 1200px; /* Standard Bootstrap container width */
     
     
+    
     }
+    
     
     
     
@@ -188,19 +249,25 @@ body {
     h2.text-success {
     
     
+    
     color: #28a745 !important; /* Ensure vibrant success color */
+    
     
     
     border-bottom: 3px solid #28a745; /* Add a subtle bottom border */
     
     
+    
     padding-bottom: 0.5rem;
+    
     
     
     margin-bottom: 1.5rem;
     
     
+    
     }
+    
     
     
     
@@ -208,13 +275,17 @@ body {
     h3.text-primary {
     
     
+    
     color: #007bff !important; /* Ensure vibrant primary color */
+    
     
     
     margin-bottom: 1rem;
     
     
+    
     }
+    
     
     
     
@@ -222,13 +293,17 @@ body {
     h3.text-secondary {
     
     
+    
     color: #6c757d !important; /* Ensure standard secondary color */
+    
     
     
     margin-bottom: 1rem;
     
     
+    
     }
+    
     
     
     
@@ -236,13 +311,17 @@ body {
     h3.text-danger {
     
     
+    
     color: #dc3545 !important; /* Ensure vibrant danger color */
+    
     
     
     margin-bottom: 1rem;
     
     
+    
     }
+    
     
     
     
@@ -250,19 +329,25 @@ body {
     .lead {
     
     
+    
     font-size: 1.25rem;
+    
     
     
     font-weight: 300;
     
     
+    
     margin-bottom: 1rem;
+    
     
     
     color: #555; /* Slightly darker lead text */
     
     
+    
     }
+    
     
     
     
@@ -270,16 +355,21 @@ body {
     .alinha {
     
     
+    
     text-align: right !important;
+    
     
     
     font-style: italic; /* Add emphasis to the aligned text */
     
     
+    
     color: #777;
     
     
+    
     }
+    
     
     
     
@@ -287,28 +377,37 @@ body {
     /* Image styles */
     
     
+    
     .img-agro {
+    
     
     
     width: 100%;
     
     
+    
     max-width: 400px; /* Slightly larger max width */
+    
     
     
     height: auto;
     
     
+    
     border-radius: 0.5rem; /* More pronounced rounded corners */
+    
     
     
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     
     
+    
     margin-top: 1rem; /* Add some top margin */
     
     
+    
     }
+    
     
     
     
@@ -316,19 +415,25 @@ body {
     .img-card {
     
     
+    
     max-height: 220px; /* Adjust card image height */
+    
     
     
     width: 100%;
     
     
+    
     object-fit: cover;
+    
     
     
     border-radius: 0.3rem;
     
     
+    
     }
+    
     
     
     
@@ -336,10 +441,13 @@ body {
     .card {
     
     
+    
     border-width: 0.1rem; /* Thinner card borders */
     
     
+    
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+    
     
     
     }
@@ -347,13 +455,17 @@ body {
     
     
     
+    
     .card:hover {
+    
     
     
     transform: translateY(-5px); /* Slight lift on hover */
     
     
+    
     box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+    
     
     
     }
