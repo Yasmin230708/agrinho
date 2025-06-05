@@ -1,0 +1,233 @@
+/* General body styles */
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+    line-height: 1.7; /* Improved readability */
+    color: #333; /* Dark gray for better text contrast */
+}
+
+.fundo {
+    background-color: #195b87; /* Cor de fundo azul escura */
+    color: #fff; /* Cor do texto branca */
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    width: 100%;
+}
+
+.cabecalho {
+    font-size: 80px;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    /* Animação de entrada */
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.cabecalho.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.lead-subtitle {
+    color: #f8f9fa;
+    font-size: 1.5rem;
+    font-weight: normal;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+    /* Animação de entrada */
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.lead-subtitle.show {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Navigation bar */
+.navebare {
+    font-size: 18px;
+    max-width: 1250px; /* Define largura máxima */
+    margin-left: auto; /* Centraliza a barra horizontalmente */
+    margin-right: auto; /* Centraliza a barra horizontalmente */
+    margin-top: 30px; /* Mantém o espaçamento superior */
+    border-radius: 100px; /* Mantém o arredondamento */
+    border: solid 1px black; /* Mantém a borda preta */
+    background-color: #2f382c; /* Seu fundo escuro */
+    padding-left: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+    padding-right: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.navbar-brand img {
+    filter: brightness(1.1);
+}
+
+.navbar-nav .nav-link {
+    margin-right: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #fff; /* Garante que os links sejam brancos para legibilidade */
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: #0dcaf0 !important;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Main content styles */
+.container {
+    max-width: 1200px; /* Standard Bootstrap container width */
+}
+
+h2.text-success {
+    color: #28a745 !important; /* Ensure vibrant success color */
+    border-bottom: 3px solid #28a745; /* Add a subtle bottom border */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h2.text-primary {
+    text-align: center;
+    color: #007bff !important; /* Ensure vibrant primary color */
+    margin-top: 60px;
+}
+
+h3.text-secondary {
+    color: #6c757d !important; /* Ensure standard secondary color */
+    margin-bottom: 1rem;
+}
+
+h3.text-danger {
+    color: #dc3545 !important; /* Ensure vibrant danger color */
+    margin-bottom: 1rem;
+}
+
+.alinha {
+    text-align: right !important;
+    font-style: italic; /* Add emphasis to the aligned text */
+    color: #777;
+}
+
+/* Image styles */
+.img-agro {
+    width: 100%;
+    max-width: 400px; /* Slightly larger max width */
+    height: auto;
+    border-color: #007bff;
+    border-radius: 20px; /* More pronounced rounded corners */
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-top: 1rem; /* Add some top margin */
+}
+
+.img-card {
+    max-height: 220px; /* Adjust card image height */
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.3rem;
+}
+
+.us {
+    margin-right: -400px;
+    margin-left: 400px;
+    border-width: 0.1rem; /* Thinner card borders */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+}
+
+.card {
+    border-width: 0.1rem; /* Thinner card borders */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.text-secondary{
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+}
+
+.lead {
+    text-align: center; /* Centraliza o texto do lead */
+    font-size: 1.25rem; /* Ajuste para um tamanho de fonte mais comum para leads */
+    font-weight: 300; /* Peso de fonte mais leve, comum para leads */
+    margin-bottom: 1.5rem; /* Aumenta o espaçamento abaixo */
+    color: #555; /* Slightly darker lead text */
+    font-family: 'Verdana', sans-serif; /* Aplicado Verdana como você solicitou para blocos de texto */
+    max-width: 900px; /* Mantido max-width */
+    margin-left: auto; /* Centraliza o bloco do lead */
+    margin-right: auto; /* Centraliza o bloco do lead */
+    transform: translateX(-20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;}
+
+
+.texto-secondary{
+    font-family: Verdana;
+    text-align: center
+}
+
+
+.img-fluidy{
+    width: 100%;
+    max-width: 400px; /* Slightly larger max width */
+    height: 400px;
+    border-color: #007bff;
+    border-radius: 20px; /* More pronounced rounded corners */
+    box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    margin-top: 80px;
+   
+}
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    }
+   
+    .fade-in.show {
+    opacity: 1;
+    }
+   
+    /* Estilos para animação de texto (exemplo: deslizar da esquerda) */
+    .slide-in-left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+   
+    .slide-in-left.show {
+    transform: translateX(0);
+    opacity: 1;
+    }
+   
+    /* Estilos para animação de título (exemplo: escala) */
+    .scale-up {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+   
+    .scale-up.show {
+    transform: scale(1);
+    opacity: 1;
+    }
+

@@ -2,115 +2,386 @@
 body {
    padding: 0;
    margin: 0;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
-   line-height: 1.7; /* Improved readability */
-   color: #333; /* Dark gray for better text contrast */
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Mantido para o corpo geral */
+   line-height: 1.7;
+   color: #333;
+   overflow-x: hidden; /* Importante para evitar scroll horizontal de elementos fora da tela */
 }
 
-/* Header section */
-header.bg-success {
-   padding: 3rem 0; /* Increased padding for more visual space */
+/* Header styles */
+.fundo {
+   background-color: #195b87;
+   color: #fff;
+   text-align: center;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   width: 100%;
 }
 
-header h1 {
-   font-size: 3.5rem; /* Larger title */
+.cabecalho {
+   font-size: 80px;
    margin-bottom: 0.75rem;
-   font-weight: bold; /* Emphasize the main title */
+   font-weight: bold;
+   font-family: sans-serif; /* Consistente com seu estilo */
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-.lead-subtitle { /* Custom class for the specific subtitle in the header */
-   color: #f8f9fa; /* Light text for subtitle */
-   font-size: 1.75rem;
+.cabecalho.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.lead-subtitle {
+   text-align: center;
+   color: #f8f9fa;
+   font-size: 1.5rem;
    font-weight: normal;
-   opacity: 0.8; /* Slightly less prominent */
-   margin-bottom: 1rem; /* Add some space below the subtitle */
+   opacity: 0.8;
+   margin-bottom: 1rem;
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.lead-subtitle.show {
+   transform: scale(1);
+   opacity: 1;
 }
 
 /* Navigation bar */
+.navebare {
+   font-size: 18px;
+   max-width: 1250px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-top: 30px;
+   border-radius: 100px;
+   border: solid 1px black;
+   background-color: #2f382c;
+   padding-left: 15px;
+   padding-right: 15px;
+   box-sizing: border-box;
+}
+
 .navbar-brand img {
-   filter: brightness(1.1); /* Slightly brighten the logo */
+   filter: brightness(1.1);
 }
 
 .navbar-nav .nav-link {
-   padding: 0.75rem 1rem;
-   transition: background-color 0.3s ease; /* Smooth hover effect */
+   margin-right: 25px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   color: #fff;
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .navbar-nav .nav-link:hover {
-   background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+   background-color: rgba(255, 255, 255, 0.1);
+   color: #fff;
 }
 
 .navbar-nav .nav-link.active {
    font-weight: bold;
+   color: #0dcaf0 !important;
+   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link.show {
+   opacity: 1;
+   transform: translateX(0);
 }
 
 /* Main content styles */
-.section-title { /* A common class for section titles for consistent styling */
-   border-bottom: 3px solid; /* Border color will be inherited from text color */
+.section-title {
+   border-bottom: 3px solid;
    padding-bottom: 0.5rem;
-   margin-bottom: 1.5rem !important; /* Use !important to override Bootstrap's mb-4 if needed */
+   margin-bottom: 1.5rem !important;
+   opacity: 0;
+   transform: scale(0.9);
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+   font-family: 'Montserrat', sans-serif; /* Usando Montserrat aqui */
+   font-weight: 700;
+   font-size: 2.25rem;
+   line-height: 1.2;
+   padding-bottom: 0.75rem;
+   border-bottom-width: 4px;
+}
+
+.section-title.show {
+   transform: scale(1);
+   opacity: 1;
 }
 
 /* Specific border colors for section titles based on Bootstrap text utility classes */
-h2.text-success.section-title {
-   border-color: #28a745; /* Specific border color for success title */
+h2.text-success.section-title { border-color: #28a745; }
+h2.text-warning.section-title { border-color: #ffc107; }
+h2.text-info.section-title { border-color: #0dcaf0; }
+h3.text-primary.section-title { border-color: #0d6efd; }
+h3.text-secondary.section-title { border-color: #6c757d; }
+h5.text-danger.section-title { border-color: #dc3545; }
+
+/* Ajustes para h2.text-primary na primeira seção (agora um section-title) */
+h2.text-primary.section-title {
+   margin-top: 70px; /* Isso pode ser ajustado para ser mais responsivo se necessário */
+   text-align: center;
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-h2.text-warning.section-title { /* For Energia Rural page */
-   border-color: #ffc107; /* Specific border color for warning title */
+.img-fluidy {
+   width: 100%;
+   max-width: 400px;
+   height: auto;
+   border-radius: 20px;
+   box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1);
+   margin-top: 80px; /* Ajuste para telas menores */
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   opacity: 0;
+   transition: opacity 0.8s ease-in; /* Mantido seu estilo de transição */
 }
 
-h2.text-info.section-title { /* For Acessibilidade à Água page */
-   border-color: #0dcaf0; /* Specific border color for info title */
+.img-fluidy.show {
+   opacity: 1;
 }
-
-h2.text-primary.section-title { /* For Produção e Industrialização page */
-   border-color: #0d6efd; /* Specific border color for primary title */
-}
-
-h3.text-primary.section-title {
-   border-color: #0d6efd; /* Specific border color for primary title */
-}
-
-h3.text-secondary.section-title {
-   border-color: #6c757d; /* Specific border color for secondary title */
-}
-
-h5.text-danger.section-title { /* Example for potential use, ensure consistency if used */
-   border-color: #dc3545;
-}
-
 
 .lead {
-   font-size: 1.25rem;
-   font-weight: 300;
-   margin-bottom: 1rem;
-   color: #555; /* Slightly darker lead text */
+   font-size: 18px; /* Tamanho original */
+   font-family: Verdana, sans-serif; /* Adicionado sans-serif como fallback */
+   color: #3f4a56;
+   max-width: 900px; /* Seu max-width original */
+   margin-left: auto; /* Centraliza */
+   margin-right: auto; /* Centraliza */
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+   text-align: center; /* Adicionado para centralizar o texto lead */
 }
 
-.main-section-image { /* Specific class for the main image to apply custom styles */
-   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+.lead.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Ajustes para textos dentro dos cards e parágrafos gerais */
+.card-text {
+   font-family: 'Verdana', sans-serif;
+   font-size: 1rem;
+   line-height: 1.6;
+   text-align: justify;
+   color: #495057;
+   padding: 1.25rem;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-text:hover {
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-text.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.text-p, .text-po {
+   font-family: 'Verdana', sans-serif;
+   font-size: 1rem;
+   line-height: 1.6;
+   text-align: justify;
+   color: #495057;
+   max-width: 750px;
+   margin-left: auto;
+   margin-right: auto;
+   padding: 1.25rem;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.text-p:hover, .text-po:hover {
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.text-p.show, .text-po.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Ajustes para títulos dentro dos cards */
+.card-title {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   font-size: 1.35rem;
+   margin-bottom: 1rem;
+   color: #195b87;
+   text-align: center;
+   transform: scale(0.95);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.card-title.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.main-section-image {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 /* Card styles */
-.custom-card { /* Custom class for cards to apply uniform styles */
-   border-width: 0.1rem; /* Thinner card borders */
-   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+.card {
+   border-width: 0.1rem;
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transição para o hover */
+   opacity: 0; /* Estado inicial para animação */
+   transform: translateY(20px); /* Estado inicial para animação */
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out, transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Inclui a transição de hover */
 }
 
-.custom-card:hover {
-   transform: translateY(-5px); /* Slight lift on hover */
-   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* More pronounced shadow on hover */
+.card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.custom-card-img { /* Custom class for images within cards */
-   max-height: 200px; /* Adjust card image height */
+.card.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.custom-card-img {
+   max-height: 200px;
    width: 100%;
-   object-fit: cover; /* Ensures images cover the area without distortion */
+   object-fit: cover;
+}
+
+/* Novos estilos para os elementos adicionados */
+.icon-feature .bi {
+   font-size: 2.5rem;
+}
+
+.icon-feature .card-title {
+   font-size: 1.1rem;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 0.5rem;
+}
+
+.icon-feature .card-text {
+   font-size: 0.9rem;
+   color: #666;
+}
+
+.galeria-container img {
+   transition: transform 0.3s ease-in-out;
+}
+
+.galeria-container img:hover {
+   transform: scale(1.05);
+}
+
+/* Formulário de Contato */
+#contactForm .mb-3,
+#contactForm button[type="submit"] {
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#contactForm .mb-3.show,
+#contactForm button[type="submit"].show {
+   opacity: 1;
+   transform: translateX(0);
 }
 
 /* Footer styles */
 footer {
-   background-color: #343a40; /* Bootstrap dark color */
+   background-color: #343a40;
    color: #fff;
+}
+
+footer p {
+   opacity: 0;
+   transform: translateY(10px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+footer p.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 991.98px) {
+   .navebare {
+       margin-top: 0;
+       border-radius: 0;
+       max-width: none;
+       border: none;
+       border-bottom: 3px solid #195b87;
+   }
+
+   .navbar-nav .nav-link {
+       margin-right: 0;
+       text-align: center;
+       padding: 0.5rem 1rem;
+   }
+
+   .cabecalho {
+       font-size: 60px;
+   }
+
+   .lead-subtitle {
+       font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .cabecalho {
+       font-size: 45px;
+   }
+
+   .lead-subtitle {
+       font-size: 1rem;
+   }
+
+   .img-fluidy {
+       margin-bottom: 1.5rem;
+       margin-top: 20px;
+   }
+
+   .card {
+       margin-bottom: 1rem;
+   }
+   .section-title {
+       font-size: 1.8rem;
+   }
+   .card-title {
+       font-size: 1.15rem;
+   }
+   .card-text, .text-p, .text-po {
+       font-size: 0.9rem;
+       padding: 1rem; /* Ajuste para telas menores */
+   }
+   .lead {
+       font-size: 1.1rem;
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+   }
 }

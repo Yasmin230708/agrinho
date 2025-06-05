@@ -2,111 +2,343 @@
 body {
    padding: 0;
    margin: 0;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
-   line-height: 1.7; /* Improved readability */
-   color: #333; /* Dark gray for better text contrast */
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.7;
+   color: #333;
+   overflow-x: hidden; /* Prevent horizontal scroll due to animations or misaligned elements */
 }
 
-/* Header section */
-header.bg-success {
-   padding: 3rem 0; /* Increased padding for more visual space */
+/* Header styles - IGUAL PARA AMBOS CSS */
+.fundo {
+   background-color: #195b87; /* Cor de fundo azul escura */
+   color: #fff; /* Cor do texto branca */
+   text-align: center;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   width: 100%;
 }
 
-header h1 {
-   font-size: 3.5rem; /* Larger title */
+.cabecalho {
+   font-size: 80px;
    margin-bottom: 0.75rem;
-   font-weight: bold; /* Emphasize the main title */
+   font-weight: bold;
+   font-family: sans-serif;
+   /* Animação de entrada */
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
 
-.lead-subtitle { /* Custom class for the specific subtitle in the header */
-   color: #f8f9fa; /* Light text for subtitle */
-   font-size: 1.75rem;
+.cabecalho.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.lead-subtitle {
+   color: #f8f9fa;
+   font-size: 1.5rem;
    font-weight: normal;
-   opacity: 0.8; /* Slightly less prominent */
-   margin-bottom: 1rem; /* Add some space below the subtitle */
+   opacity: 0.8;
+   margin-bottom: 1rem;
+   /* Animação de entrada */
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.lead-subtitle.show {
+   transform: scale(1);
+   opacity: 1;
 }
 
 /* Navigation bar */
+.navebare {
+   font-size: 18px;
+   max-width: 1250px; /* Define largura máxima */
+   margin-left: auto; /* Centraliza a barra horizontalmente */
+   margin-right: auto; /* Centraliza a barra horizontalmente */
+   margin-top: 30px; /* Mantém o espaçamento superior */
+   border-radius: 100px; /* Mantém o arredondamento */
+   border: solid 1px black; /* Mantém a borda preta */
+   background-color: #2f382c; /* Seu fundo escuro */
+   padding-left: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+   padding-right: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+   box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
 .navbar-brand img {
-   filter: brightness(1.1); /* Slightly brighten the logo */
+   filter: brightness(1.1);
 }
 
 .navbar-nav .nav-link {
-   padding: 0.75rem 1rem;
-   transition: background-color 0.3s ease; /* Smooth hover effect */
+   margin-right: 25px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   color: #fff; /* Garante que os links sejam brancos para legibilidade */
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .navbar-nav .nav-link:hover {
-   background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+   background-color: rgba(255, 255, 255, 0.1);
+   color: #fff;
 }
 
 .navbar-nav .nav-link.active {
    font-weight: bold;
+   color: #0dcaf0 !important;
+   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link.show {
+   opacity: 1;
+   transform: translateX(0);
 }
 
 /* Main content styles */
-.section-title { /* A common class for section titles for consistent styling */
-   border-bottom: 3px solid; /* Border color will be inherited from text color */
+.section-title {
+   border-bottom: 3px solid;
    padding-bottom: 0.5rem;
-   margin-bottom: 1.5rem !important; /* Use !important to override Bootstrap's mb-4 if needed */
+   margin-bottom: 1.5rem !important;
+   opacity: 0;
+   transform: scale(0.9);
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.section-title.show {
+   transform: scale(1);
+   opacity: 1;
 }
 
 /* Specific border colors for section titles based on Bootstrap text utility classes */
-h2.text-success.section-title {
-   border-color: #28a745; /* Specific border color for success title */
+h2.text-success.section-title { border-color: #28a745; }
+h2.text-warning.section-title { border-color: #ffc107; }
+h2.text-info.section-title { border-color: #0dcaf0; }
+h3.text-primary.section-title { border-color: #0d6efd; }
+h3.text-secondary.section-title { border-color: #6c757d; }
+h5.text-danger.section-title { border-color: #dc3545; }
+
+/* Ajustes para h2.text-primary na primeira seção (agora um section-title) */
+h2.text-primary.section-title {
+   margin-top: 70px;
+   text-align: center;
+   max-width: 600px;
+   margin-left: auto;
+   margin-right: auto;
 }
 
-h2.text-warning.section-title { /* For Energia Rural page */
-   border-color: #ffc107; /* Specific border color for warning title */
+.img-fluidy {
+   width: 100%;
+   max-width: 400px;
+   height: auto;
+   border-radius: 20px;
+   box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1);
+   margin-top: 80px;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   opacity: 0;
+   transition: opacity 0.8s ease-in;
 }
 
-h2.text-info.section-title { /* NEW: For Acessibilidade à Água page */
-   border-color: #0dcaf0; /* Specific border color for info title */
+.img-fluidy.show {
+   opacity: 1;
 }
 
-h3.text-primary.section-title {
-   border-color: #0d6efd; /* Specific border color for primary title */
+.img-fluidy img {
+   width: 100%;
+   height: auto;
+   display: block;
+   border-radius: 20px;
 }
-
-h3.text-secondary.section-title {
-   border-color: #6c757d; /* Specific border color for secondary title */
-}
-
-h5.text-danger.section-title { /* Example for potential use, ensure consistency if used */
-   border-color: #dc3545;
-}
-
 
 .lead {
-   font-size: 1.25rem;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   text-align: center;
+   font: bold;
+   font-size: 20px;
    font-weight: 300;
    margin-bottom: 1rem;
-   color: #555; /* Slightly darker lead text */
+   color: #555;
+   max-width: 800px;
+   margin-left: auto;
+   margin-right: auto;
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.main-section-image { /* Specific class for the main image to apply custom styles */
-   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+.lead.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.loi {
+   text-align: center;
+   transform: scale(0.9);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.loi.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.text-po {
+   font-family: Verdana;
+   text-align: center;
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-po.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.text-p {
+   font-family: Verdana;
+   text-align: center;
+   max-width: 700px;
+   margin-left: auto;
+   margin-right: auto;
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.text-pi {
+   font-family: Verdana;
+   text-align: center;
+   margin-left: -120px;
+   width: 900px;
+}
+
+.text-p.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.text-center {
+   text-align: center;
+}
+
+.main-section-image {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
 /* Card styles */
-.custom-card { /* Custom class for cards to apply uniform styles */
-   border-width: 0.1rem; /* Thinner card borders */
-   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+.card {
+   border-width: 0.1rem;
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.custom-card:hover {
-   transform: translateY(-5px); /* Slight lift on hover */
-   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* More pronounced shadow on hover */
+.card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.custom-card-img { /* Custom class for images within cards */
-   max-height: 200px; /* Adjust card image height */
+.card.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.custom-card-img {
+   max-height: 200px;
    width: 100%;
-   object-fit: cover; /* Ensures images cover the area without distortion */
+   object-fit: cover;
+}
+
+/* Formulário de Contato */
+#contactForm .mb-3,
+#contactForm button[type="submit"] {
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#contactForm .mb-3.show,
+#contactForm button[type="submit"].show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.is {
+   margin-right: 80px;
+}
+
+.us {
+   margin-left: 80px;
+}
+
+.mds{
+   margin-left: 340px;
 }
 
 /* Footer styles */
 footer {
-   background-color: #343a40; /* Bootstrap dark color */
+   background-color: #343a40;
    color: #fff;
+}
+
+footer p {
+   opacity: 0;
+   transform: translateY(10px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+footer p.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 991.98px) {
+   .navebare {
+       margin-top: 0;
+       border-radius: 0;
+       max-width: none;
+       border: none;
+       border-bottom: 3px solid #195b87;
+   }
+
+   .navbar-nav .nav-link {
+       margin-right: 0;
+       text-align: center;
+       padding: 0.5rem 1rem;
+   }
+
+   /* Media Queries para Responsividade do Cabeçalho - IGUAL PARA AMBOS CSS */
+   .cabecalho {
+       font-size: 60px;
+   }
+
+   .lead-subtitle {
+       font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 767.98px) {
+   /* Media Queries para Responsividade do Cabeçalho - IGUAL PARA AMBOS CSS */
+   .cabecalho {
+       font-size: 45px;
+   }
+
+   .lead-subtitle {
+       font-size: 1rem;
+   }
+
+   .img-fluidy {
+       margin-bottom: 1.5rem;
+       margin-top: 20px;
+   }
+
+   .card {
+       margin-bottom: 1rem;
+   }
 }

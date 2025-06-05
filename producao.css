@@ -1,0 +1,508 @@
+/* General body styles */
+body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern and readable font */
+   line-height: 1.7; /* Improved readability */
+   color: #333; /* Dark gray for better text contrast */
+   overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Header styles */
+.fundo {
+   background-color: #195b87; /* Cor de fundo azul escura */
+   color: #fff; /* Cor do texto branca */
+   text-align: center;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   width: 100%;
+}
+
+.cabecalho {
+   font-size: 80px;
+   margin-bottom: 0.75rem;
+   font-weight: bold;
+   font-family: sans-serif; /* Fallback for general header */
+   /* Animação de entrada */
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.cabecalho.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+.lead-subtitle {
+   text-align: center; /* Garantido */
+   color: #f8f9fa;
+   font-size: 1.5rem;
+   font-weight: normal;
+   opacity: 0.8;
+   margin-bottom: 1rem;
+   /* Animação de entrada */
+   transform: scale(0.8);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.lead-subtitle.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+/* Navigation bar */
+.navebare {
+   font-size: 18px;
+   max-width: 1250px; /* Define largura máxima */
+   margin-left: auto; /* Centraliza a barra horizontalmente */
+   margin-right: auto; /* Centraliza a barra horizontalmente */
+   margin-top: 30px; /* Mantém o espaçamento superior */
+   border-radius: 100px; /* Mantém o arredondamento */
+   border: solid 1px black; /* Mantém a borda preta */
+   background-color: #2f382c; /* Seu fundo escuro */
+   padding-left: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+   padding-right: 15px; /* Adiciona padding para o conteúdo não colar nas bordas */
+   box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.navbar-brand img {
+   filter: brightness(1.1);
+}
+
+.navbar-nav .nav-link {
+   margin-right: 25px;
+   transition: background-color 0.3s ease, color 0.3s ease;
+   color: #fff; /* Garante que os links sejam brancos para legibilidade */
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.navbar-nav .nav-link:hover {
+   background-color: rgba(255, 255, 255, 0.1);
+   color: #fff;
+}
+
+.navbar-nav .nav-link.active {
+   font-weight: bold;
+   color: #0dcaf0 !important;
+   background-color: rgba(255, 255, 255, 0.05);
+}
+
+.navbar-nav .nav-link.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Main content styles */
+/* .container { max-width: 1200px; } - Isso deve ser tratado no HTML com a classe Bootstrap */
+
+.section-title {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 700;
+   font-size: 2.25rem;
+   line-height: 1.2;
+   padding-bottom: 0.75rem;
+   border-bottom-width: 4px;
+   margin-bottom: 1.5rem !important;
+   opacity: 0;
+   transform: scale(0.9);
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+   text-align: center; /* Adicionado para títulos de seção serem centralizados por padrão */
+}
+
+.section-title.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+/* Specific border colors for section titles based on Bootstrap text utility classes */
+h2.text-success.section-title { border-color: #28a745; }
+h2.text-warning.section-title { border-color: #ffc107; }
+h2.text-info.section-title { border-color: #0dcaf0; }
+h3.text-primary.section-title { border-color: #0d6efd; } /* Corrigido de section-tite para section-title */
+h3.text-secondary.section-title { border-color: #6c757d; }
+h5.text-danger.section-title { border-color: #dc3545; }
+
+/* Ajustes para h2.text-primary na primeira seção (agora um section-title) */
+/* Removido o seletor h2.text-primary.section-title, pois section-title já centraliza */
+/* Se houver um título específico que precisa de max-width e centralização, use uma classe específica */
+
+
+.img-fluidy {
+   width: 100%;
+   max-width: 400px; /* Slightly larger max width */
+   height: auto; /* Mantido auto para evitar distorção */
+   border-radius: 20px; /* More pronounced rounded corners */
+   box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+   margin-top: 80px;
+   display: block; /* Para margin: auto funcionar */
+   margin-left: auto; /* Centraliza a imagem */
+   margin-right: auto; /* Centraliza a imagem */
+   opacity: 0;
+   transition: opacity 0.8s ease-in;
+}
+
+.img-fluidy.show {
+   opacity: 1;
+}
+
+/* Removido .img-fluidy img - já é coberto por .img-fluidy */
+
+
+.lead {
+   text-align: center; /* Centraliza o texto do lead */
+   font-size: 1.25rem; /* Ajuste para um tamanho de fonte mais comum para leads */
+   font-weight: 300; /* Peso de fonte mais leve, comum para leads */
+   margin-bottom: 1.5rem; /* Aumenta o espaçamento abaixo */
+   color: #555; /* Slightly darker lead text */
+   font-family: 'Verdana', sans-serif; /* Aplicado Verdana como você solicitou para blocos de texto */
+   max-width: 900px; /* Mantido max-width */
+   margin-left: auto; /* Centraliza o bloco do lead */
+   margin-right: auto; /* Centraliza o bloco do lead */
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.lead.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Estilos para títulos poie e poi - verifique se ainda são usados e se precisam de margin-left fixo */
+.poie {
+   /* Removido margin-left fixo se a intenção é centralizar ou alinhar ao container */
+   font-size: 75px;
+   text-align: center; /* Adicionado para centralizar */
+   margin-left: auto;
+   margin-right: auto;
+   max-width: fit-content; /* Ou um valor específico se for um título */
+}
+
+.poi {
+   /* Removido margin-left fixo se a intenção é centralizar ou alinhar ao container */
+   font-size: 35px;
+   text-align: center; /* Adicionado para centralizar */
+   margin-left: auto;
+   margin-right: auto;
+   max-width: fit-content; /* Ou um valor específico se for um título */
+}
+
+.loi {
+   text-align: center;
+   transform: scale(0.9);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.loi.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+/* Classe .u - REMOVIDA A MARGEM QUE CAUSAVA DESALINHAMENTO */
+/* Se a classe .u era para algum propósito específico de layout, deve ser reavaliada sem margin-left fixo */
+/* Ex: .u { margin-top: 20px; } - se for apenas um espaçamento superior */
+.u {
+   margin-top: 20px;
+   /* Removido margin-left: 140px; - Esta era a causa do desalinhamento */
+}
+
+/* Ajustes para textos dentro dos cards e parágrafos gerais */
+.card-text {
+   font-family: 'Verdana', sans-serif; /* Alterado para Verdana */
+   font-size: 1rem;
+   line-height: 1.6;
+   text-align: justify;
+   color: #495057;
+   padding: 1.25rem; /* Adicionado padding */
+   border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil */
+   border-radius: 8px; /* Cantos arredondados */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.card-text:hover {
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra maior ao passar o mouse */
+}
+
+.card-text.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+.text-p, .text-po {
+   font-family: 'Verdana', sans-serif; /* Alterado para Verdana */
+   font-size: 1rem;
+   line-height: 1.6;
+   text-align: justify;
+   color: #495057;
+   max-width: 750px;
+   margin-left: auto; /* Centraliza o bloco */
+   margin-right: auto; /* Centraliza o bloco */
+   padding: 1.25rem; /* Adicionado padding */
+   border: 1px solid rgba(0, 0, 0, 0.1); /* Borda sutil */
+   border-radius: 8px; /* Cantos arredondados */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra mais suave */
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+.text-p:hover, .text-po:hover {
+   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra maior ao passar o mouse */
+}
+
+.text-p.show, .text-po.show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Ajustes para títulos dentro dos cards */
+.card-title {
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 600;
+   font-size: 1.35rem;
+   margin-bottom: 1rem;
+   color: #195b87;
+   text-align: center;
+   transform: scale(0.95);
+   opacity: 0;
+   transition: transform 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+.card-title.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+/* Estilos de texto Bootstrap já cobertos */
+.text-center {
+   text-align: center;
+}
+
+.alinha {
+   text-align: right !important;
+   font-style: italic; /* Add emphasis to the aligned text */
+   color: #777;
+}
+
+.texto-secondary {
+   font-family: Verdana;
+   text-align: center;
+}
+
+/* Imagens e Cards */
+.main-section-image {
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.img-agro { /* Se esta classe ainda for usada */
+   width: 100%;
+   max-width: 400px;
+   height: auto; /* Melhor que height fixo */
+   border-color: #007bff;
+   border-radius: 20px;
+   box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.1);
+   margin-top: 1rem;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.img-card {
+   max-height: 220px;
+   width: 100%;
+   object-fit: cover;
+   border-radius: 0.3rem;
+}
+
+.us { /* Verifique o uso desta classe, parece ser para alinhamento de card específico */
+   /* Removido margin-right: -400px; e margin-left: 400px; - isso provavelmente causava problemas de layout */
+   border-width: 0.1rem;
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+   margin-left: auto; /* Tenta centralizar se for um bloco */
+   margin-right: auto;
+   /* Se for para alinhar um card específico, o ideal é usar flexbox ou classes de coluna do Bootstrap */
+}
+
+/* Card styles - Consolidados */
+.card {
+   border-width: 0.1rem; /* Thinner card borders */
+   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effects */
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card:hover {
+   transform: translateY(-5px); /* Slight lift on hover */
+   box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.15) !important; /* More pronounced shadow on hover */
+}
+
+.card.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.custom-card-img {
+   max-height: 200px;
+   width: 100%;
+   object-fit: cover;
+}
+
+.img-incentivos {
+   max-height: 350px;
+   width: auto;
+   border-radius: 10px;
+   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+   margin-top: 1rem;
+}
+
+/* Formulário de Contato */
+#contactForm .mb-3,
+#contactForm button[type="submit"] {
+   opacity: 0;
+   transform: translateX(-20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#contactForm .mb-3.show,
+#contactForm button[type="submit"].show {
+   opacity: 1;
+   transform: translateX(0);
+}
+
+/* Botão Voltar para Cima */
+#backToTopBtn {
+   bottom: 20px;
+   right: 20px;
+   z-index: 99;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+#backToTopBtn.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Footer styles */
+footer {
+   background-color: #343a40;
+   color: #fff;
+}
+
+footer p {
+   opacity: 0;
+   transform: translateY(10px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+footer p.show {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Animations */
+.fade-in {
+   opacity: 0;
+   transition: opacity 1s ease-in-out;
+}
+
+.fade-in.show {
+   opacity: 1;
+}
+
+.slide-in-left {
+   transform: translateX(-50px);
+   opacity: 0;
+   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.slide-in-left.show {
+   transform: translateX(0);
+   opacity: 1;
+}
+
+.scale-up {
+   transform: scale(0.9);
+   opacity: 0;
+   transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.scale-up.show {
+   transform: scale(1);
+   opacity: 1;
+}
+
+
+/* Media Queries para Responsividade */
+@media (max-width: 991.98px) {
+   .navebare {
+       margin-top: 0;
+       border-radius: 0;
+       max-width: none;
+       border: none;
+       border-bottom: 3px solid #195b87;
+   }
+
+   .navbar-nav .nav-link {
+       margin-right: 0;
+       text-align: center;
+       padding: 0.5rem 1rem;
+   }
+
+   .cabecalho {
+       font-size: 60px;
+   }
+
+   .lead-subtitle {
+       font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 767.98px) {
+   .cabecalho {
+       font-size: 45px;
+   }
+
+   .lead-subtitle {
+       font-size: 1rem;
+   }
+
+   .img-fluidy {
+       margin-bottom: 1.5rem;
+       margin-top: 20px;
+   }
+
+   .card {
+       margin-bottom: 1rem;
+   }
+   .section-title {
+       font-size: 1.8rem;
+   }
+   .card-title {
+       font-size: 1.15rem;
+   }
+   .card-text, .text-p, .text-po {
+       font-size: 0.9rem;
+       padding: 1rem; /* Ajuste para telas menores */
+   }
+   .lead {
+       font-size: 1.1rem;
+   }
+
+   /* Ajustes para alinhar títulos e parágrafos móveis */
+   .poie, .poi {
+       margin-left: auto;
+       margin-right: auto;
+       text-align: center;
+       width: fit-content; /* Ou 100% dependendo do layout desejado */
+   }
+}
